@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RealHouzing.BusinessLayer.Abstract;
+using RealHouzing.DtoLayer.CategoryDtos;
+using RealHouzing.EntityLayer.Concrete;
 
 namespace RealHouzing.ApiLayer.Controllers
 {
@@ -28,6 +30,36 @@ namespace RealHouzing.ApiLayer.Controllers
             var value = _categoryService.TGetByID(id);
             _categoryService.TDelete(value);
             return Ok();
+        }
+
+        [HttpPost]
+        public IActionResult AddCategory(ResultCategoryDto resultCategoryDto)
+        {
+            Category category = new Category()
+            {
+                CategoryName = resultCategoryDto.CategoryName
+            };
+            _categoryService.TInsert(category);
+            return Ok();
+        }
+
+        [HttpPut]
+        public IActionResult UpdateCategory(UpdateCategoryDto updateCategoryDto)
+        {
+            Category category = new Category()
+            {
+                CategoryID = updateCategoryDto.CategoryID,
+                CategoryName = updateCategoryDto.CategoryName
+            };
+            _categoryService.TUpdate(category);
+            return Ok();
+        }
+
+        [HttpGet("id")]
+        public IActionResult GetCategory(int id)
+        {
+            var values = _categoryService.TGetByID(id);
+            return Ok(values);
         }
     }
 }

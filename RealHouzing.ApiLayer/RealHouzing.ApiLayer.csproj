@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RealHouzing.BusinessLayer\RealHouzing.BusinessLayer.csproj" />
     <ProjectReference Include="..\RealHouzing.DataAccessLayer\RealHouzing.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\RealHouzing.DtoLayer\RealHouzing.DtoLayer.csproj" />
     <ProjectReference Include="..\RealHouzing.EntityLayer\RealHouzing.EntityLayer.csproj" />
   </ItemGroup>
 
