@@ -24,7 +24,7 @@ namespace RealHouzing.ApiLayer.Controllers
             return Ok(values);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteCategory(int id)
         {
             var value = _categoryService.TGetByID(id);
@@ -55,7 +55,7 @@ namespace RealHouzing.ApiLayer.Controllers
             return Ok();
         }
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public IActionResult GetCategory(int id)
         {
             var values = _categoryService.TGetByID(id);

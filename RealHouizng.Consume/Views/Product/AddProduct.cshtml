@@ -1,0 +1,39 @@
+﻿@model AddProductViewModel
+
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <br />
+    <label>İlan Başlığı</label>
+    <input type="text" class="form-control" asp-for="ProductTitle"/>
+    <br />
+    <label>İlan Fiyatı</label>
+    <input type="text" class="form-control" asp-for="ProductPrice" />
+    <br />
+    <label>İlan Açıklaması</label>
+    <input type="text" class="form-control" asp-for="ProductType" />
+    <br />
+    <label>Adres Bilgileri</label>
+    <input type="text" class="form-control" asp-for="ProductAddress" />
+    <br />
+    <label>Yatak Odası Sayısı</label>
+    <input type="number" class="form-control" asp-for="BedRoomCount" />
+    <br />
+    <label>Banyo Sayısı</label>
+    <input type="number" class="form-control" asp-for="BathCount" />
+    <br />
+    <label>Alan Bilgisi</label>
+    <input type="number" class="form-control" asp-for="Square" />
+    <br />
+    <label>İlan Görseli</label>
+    <input type="text" class="form-control" asp-for="CoverImageUrl" />
+    <br />
+    <label>İlan Kategorisi</label>
+    <input type="text" class="form-control" asp-for="CategoryID" />
+    <br />
+    <button class="btn btn-info">İlan Ekle</button>
+</form>
+

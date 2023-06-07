@@ -1,0 +1,24 @@
+﻿@model List<ProductListViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>İlan Başlığı</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductID</td>
+                <td>@item.ProductTitle</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="#" class="btn btn-primary">Yeni İlan Girişi</a>
+</div>
