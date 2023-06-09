@@ -8,7 +8,6 @@ namespace RealHouizng.Consume.Controllers
         {
             return View();
         }
-
         public PartialViewResult HeadPartial()
         {
             return PartialView();

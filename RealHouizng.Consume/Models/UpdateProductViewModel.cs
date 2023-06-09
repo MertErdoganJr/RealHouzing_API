@@ -1,7 +1,8 @@
 ﻿namespace RealHouizng.Consume.Models
 {
-    public class AddProductViewModel
-    {      
+    public class UpdateProductViewModel
+    {
+        public int ProductID { get; set; }
         public string ProductTitle { get; set; }
         public decimal ProductPrice { get; set; }
         public string ProductType { get; set; }

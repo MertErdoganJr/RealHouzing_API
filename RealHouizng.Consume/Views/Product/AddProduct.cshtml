@@ -8,7 +8,7 @@
 <form method="post">
     <br />
     <label>İlan Başlığı</label>
-    <input type="text" class="form-control" asp-for="ProductTitle"/>
+    <input type="text" class="form-control" asp-for="ProductTitle" />
     <br />
     <label>İlan Fiyatı</label>
     <input type="text" class="form-control" asp-for="ProductPrice" />
@@ -32,8 +32,10 @@
     <input type="text" class="form-control" asp-for="CoverImageUrl" />
     <br />
     <label>İlan Kategorisi</label>
-    <input type="text" class="form-control" asp-for="CategoryID" />
+    @Html.DropDownListFor(x=>x.CategoryID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control"})
     <br />
     <button class="btn btn-info">İlan Ekle</button>
 </form>
+
+
 

@@ -1,0 +1,43 @@
+﻿@model UpdateProductViewModel
+
+@{
+    ViewData["Title"] = "UpdateProduct";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <form method="post">
+        <input type="hidden" asp-for="ProductID" />
+        <br />
+        <label>İlan Başlığı</label>
+        <input type="text" class="form-control" asp-for="ProductTitle" />
+        <br />
+        <label>İlan Fiyatı</label>
+        <input type="text" class="form-control" asp-for="ProductPrice" />
+        <br />
+        <label>İlan Açıklaması</label>
+        <input type="text" class="form-control" asp-for="ProductType" />
+        <br />
+        <label>Adres Bilgileri</label>
+        <input type="text" class="form-control" asp-for="ProductAddress" />
+        <br />
+        <label>Yatak Odası Sayısı</label>
+        <input type="number" class="form-control" asp-for="BedRoomCount" />
+        <br />
+        <label>Banyo Sayısı</label>
+        <input type="number" class="form-control" asp-for="BathCount" />
+        <br />
+        <label>Alan Bilgisi</label>
+        <input type="number" class="form-control" asp-for="Square" />
+        <br />
+        <label>İlan Görseli</label>
+        <input type="text" class="form-control" asp-for="CoverImageUrl" />
+        <br />
+        <label>İlan Kategorisi</label>
+        @Html.DropDownListFor(x=>x.CategoryID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control"})
+        <br />
+        <button class="btn btn-info">İlan Güncelle</button>
+    </form>
+</div>
+
+
